@@ -1,9 +1,10 @@
 {
   "name": "presentations",
   "version": "1.0.0",
-  "description": "Various teaching presentations I made",
+  "description": "Various teaching presentations",
   "main": "index.js",
   "scripts": {
+    "formatting": "prettier *.{js,jsx,css,json,md} --check",
     "slides:watch": "rimraf dist && cpx src/images/**/* dist/images && marp --watch",
     "build": "rimraf dist && cpx src/images/**/* dist/images && marp"
   },
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@marp-team/marp-cli": "^0.17.0",
     "cpx": "^1.5.0",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.2"
   },
   "marp": {
@@ -22,5 +24,22 @@
     "output": "dist",
     "themeSet": "./themes",
     "html": true
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
   }
 }

@@ -393,7 +393,9 @@ notifyUser('ldgit').then(undefined, error => {
 
 ```javascript
 new Promise(resolve => resolve(42))
-  .then(value => { throw new Error(value); })
+  .then(value => {
+    throw new Error(value);
+  })
   .then(value => value + 5)
   .then(
     value => console.log(`Vrijednost je ${value}`),
@@ -526,7 +528,7 @@ getUser('ldgit')
 - Vraćaju `Promise` objekt
 - I arrow funkcije mogu biti async
 
-<!-- 
+<!--
 Bilo koju običnu funkcije možemo pretvoriti u asinkronu ako joj dodamo `async` prefix
 - ta funkcija će onda zapravo vratiti `Promise` koji je resolvan sa vraćenom vrijednošću
 -->
@@ -549,7 +551,7 @@ Bilo koju običnu funkcije možemo pretvoriti u asinkronu ako joj dodamo `async`
 
 ```javascript
 try {
-  const user = await getUser('ldgit')
+  const user = await getUser('ldgit');
   const reviews = await getReviews(user);
   renderReviews(reviews);
 } catch (error) {
