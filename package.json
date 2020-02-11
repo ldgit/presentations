@@ -4,8 +4,8 @@
   "description": "Various teaching presentations I made",
   "main": "index.js",
   "scripts": {
-    "slides:watch": "cpx src/images/**/* dist/images && marp --watch",
-    "build": "cpx src/images/**/* dist/images && marp"
+    "slides:watch": "rimraf dist && cpx src/images/**/* dist/images && marp --watch",
+    "build": "rimraf dist && cpx src/images/**/* dist/images && marp"
   },
   "keywords": [
     "javascript"
@@ -14,7 +14,8 @@
   "license": "MIT",
   "devDependencies": {
     "@marp-team/marp-cli": "^0.17.0",
-    "cpx": "^1.5.0"
+    "cpx": "^1.5.0",
+    "rimraf": "^3.0.2"
   },
   "marp": {
     "inputDir": "./src",
