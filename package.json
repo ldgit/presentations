@@ -6,7 +6,7 @@
   "scripts": {
     "formatting": "prettier *.{js,jsx,css,json,md} --check",
     "slides:watch": "rimraf docs && cpx src/images/**/* docs/images && marp --watch",
-    "build": "rimraf docs && cpx src/images/**/* docs/images && marp"
+    "build": "npm run prettier && rimraf docs && cpx src/images/**/* docs/images && marp"
   },
   "keywords": [
     "javascript"
