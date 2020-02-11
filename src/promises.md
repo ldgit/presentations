@@ -628,7 +628,7 @@ async function getFishCount() {
 
 <!-- _class: -->
 
-## Promise chain napisan preko Async Await (sync verzija [ovdje](#20))
+## Promise chain napisan preko Async Await (sync verzija [ovdje](#21))
 
 ```javascript
 try {
