@@ -4,7 +4,8 @@
   "description": "Various teaching presentations I made",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "slides:watch": "cpx src/images/**/* dist/images && marp --watch",
+    "build": "cpx src/images/**/* dist/images && marp"
   },
   "keywords": [
     "javascript"
@@ -12,6 +13,13 @@
   "author": "Danko Lučić",
   "license": "MIT",
   "devDependencies": {
-    "@marp-team/marp-cli": "^0.17.0"
+    "@marp-team/marp-cli": "^0.17.0",
+    "cpx": "^1.5.0"
+  },
+  "marp": {
+    "inputDir": "./src",
+    "output": "dist",
+    "themeSet": "./themes",
+    "html": true
   }
 }
