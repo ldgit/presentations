@@ -540,7 +540,7 @@ Prima (najčešće) `array` `Promise` objekata, a vraća novi `Promise` koji je:
 Konverzija `getUsers` funkcije iz [ranijeg](#6) primjera:
 
 ```javascript
-function getUsers(names, callback) {
+function getUsers(names) {
   const userPromises = names.map(name => {
     // ajax funkcija je asinkrona i vraća promise
     return ajax(`/user/${name}`).then(({ user }) => {
