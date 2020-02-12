@@ -205,10 +205,10 @@ Bug: ako pošaljemo dva imena za koje nema korisnika, callback će biti pozvan d
   - Jedino koje može prijeći u neko drugo stanje
 <!-- prettier-ignore -->
 - :white_check_mark: _fulfilled_ - ispunjeno
-  - Operacija je uspješno završena, opcionalno sa najviše jednom vrijednošću
+  - Operacija je uspješno završena, s najviše jednom vrijednošću
   - Vrijednost se **neće** promijeniti
 - :x: _rejected_ - odbačeno 
-  - Operacija neuspješno završena, opcionalno sa nekim razlogom (error)
+  - Operacija neuspješno završena, opcionalno s nekim razlogom (error)
   - Razlog se **neće** promijeniti
 
 <!--
