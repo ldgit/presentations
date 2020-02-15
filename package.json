@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "formatting": "prettier *.{js,jsx,css,json,md} --check",
-    "slides:watch": "rimraf docs && cpx src/images/**/* docs/images && marp --watch",
-    "build": "npm run formatting && rimraf docs && cpx src/images/**/* docs/images && marp"
+    "slides:watch": "rimraf docs && cpy src/images/**/* docs/images && marp --watch",
+    "build": "npm run formatting && rimraf docs && cpy src/images/**/* docs/images && marp"
   },
   "keywords": [
     "javascript"
@@ -15,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@marp-team/marp-cli": "^0.17.0",
-    "cpx": "^1.5.0",
+    "cpy-cli": "^3.1.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2"
   },
