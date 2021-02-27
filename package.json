@@ -4,7 +4,7 @@
   "description": "Various teaching presentations",
   "main": "index.js",
   "scripts": {
-    "formatting": "prettier *.{js,jsx,css,json,md} --check",
+    "formatting": "prettier . --check",
     "slides:watch": "rimraf docs && cpy src/images/**/* docs/images && marp --watch",
     "build": "npm run formatting && rimraf docs && cpy src/images/**/* docs/images && marp"
   },
@@ -14,9 +14,9 @@
   "author": "Danko Lučić",
   "license": "MIT",
   "devDependencies": {
-    "@marp-team/marp-cli": "^0.17.0",
-    "cpy-cli": "^3.1.0",
-    "prettier": "^1.19.1",
+    "@marp-team/marp-cli": "^0.23.2",
+    "cpy-cli": "^3.1.1",
+    "prettier": "^2.2.1",
     "rimraf": "^3.0.2"
   },
   "marp": {

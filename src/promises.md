@@ -339,7 +339,8 @@ new Promise((resolve, reject) => {
 
 :zap: Cilj Promise-a je dobiti nazad mogućnosti sinkronog kôda u async funkcijama. :zap:
 
-Ponašanje `onFulfilled` i  `onRejected` handlera pokriva četiri osnovna scenarija, ovisno o stanju `Promise` objekta:
+Ponašanje `onFulfilled` i `onRejected` handlera pokriva četiri osnovna scenarija, ovisno o stanju `Promise` objekta:
+
 1. Ispunjeno obećanje, `onFullfiled` vraća vrijednost <=> jednostavna funkcionalna transformacija
 2. Ispunjeno obećanje, `onFullfiled` baca iznimku <=> bacanje iznimke kada dobijemo neispravnu vrijednost
 3. Odbačeno obećanje, `onRejected` vraća vrijednost <=> `catch` unutar kojeg smo handle-ali grešku
@@ -453,9 +454,7 @@ getUser('ldgit', user => {
 
 ```javascript
 // Promises
-getUser('ldgit')
-  .then(getReviews)
-  .then(renderReviews);
+getUser('ldgit').then(getReviews).then(renderReviews);
 ```
 
 ---
